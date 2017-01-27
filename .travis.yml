@@ -1,8 +1,14 @@
 language: bash
-
 before_script:
- - touch echo.html
-
+- touch echo.html
 script:
- - shunit2
+- shunit2
+deploy:
+  provider: releases
+  api_key:
+    secure: OoNRiLhVInjfCvoxdrjcprKstkfaajrhy9CSHTCJM0J8YGwXxBwk325Qmd3bpE7hairdsC1gANEyMnxjGJtd7OJQ4p7J7ro+YP8JtvWclw2iQjawP2G99HFLyfk84OxHWfb4K22FIoLxDx8d7UxDP1Ag6tgr2QVrLCSZrWblWWmxH5dj78dJvEXpvLO32+q17PaSWJ1gnRsRV+ZmPvKFfjtmjf3a+mBgNQR5h8v/vt4E31l6MkbkOX0V9Kc2MJfbT3P6eLZl3flQWLO6/eyjCPstTV+oBqZ2sL+nLdNQUAVREaf2hrD+NUl0dsW13fAe8tSg+MdwOIM94kPPB8/F6Akxj1XShUbfgY6OKoRJYohwpbFfrfKvp/XV97jIxZze67lD/8Vf0OPJqkf2q5K6DsEO3P67gcRN99aFKYj4TQGfxI16ne4u60+Qb2Q1hseSoMeuCwCuJk9n6ftt/YoCqg3fsi4hPXeFTr8qRZYdEX9ijsXupSnHmWBY9Df/eEWg68mEEiQvceX0wfr83dNMV3N+yXYPH7HZfGkez/eX+DFQoowEttShzSkJpRMT4fnlKnPbXHzU0W6+6V2FxF8UR2MrTtthqJ/av169lgzLLtgpTVUSt/l0NEe4erWSU9fSOmPOoP3GnHGvlLbodmOKeHUAMbtfNtem1buKXQ5QBoc=
+  file: test.html
+  on:
+    repo: codex-team/codex.editor
+    branch: ci
 
