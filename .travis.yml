@@ -4,5 +4,5 @@ before_script:
  - touch echo.html
 
 script:
- - bash test.sh
+ - shunit2
 
